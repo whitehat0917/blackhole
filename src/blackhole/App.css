@@ -1,0 +1,234 @@
+body{
+  background-color: black;
+}
+.navbar-dark{
+  /* background-color: black; */
+}
+ul {
+  list-style-type: none;
+ }
+ /*Header*/
+.MyNavBar{
+  margin: 1rem 0px 1rem 0px;
+}
+.MyNavBarLogo{
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+}
+/* .MyNavBarMenu{
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+} */
+.MyNavBarStart{
+  align-items: stretch;
+  display: flex;
+  
+  /* width: 100%; */
+}
+.MyNavBarEnd{
+  display: flex;
+  align-items: center;
+  /*justify-content: center; */
+}
+.MyNavBarCollpaseBtn{
+  align-self: center;
+}
+@media screen and (min-width: 769px)
+{
+  .MyNavBar{
+    align-items: stretch;
+    display: flex;
+  }
+  .MyNavBarCollpaseBtn{
+    display: none;
+    
+  }
+  .MyNavBarLogo{
+    /* width: 30%; */
+  }
+  .MyNavBarMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .MyNavBarStart{
+    justify-content: flex-start;
+    margin-right: auto;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 769px)
+{
+  .MyNavBar{
+
+  }
+  .MyNavBarMenu{
+
+  }
+  .MyNavBarStart{
+    flex-direction: column;
+  }
+}
+/*--header*/
+
+.rangeslider__labels{
+  margin: 0;
+}
+
+.rangeslider__labels li{
+  width: fit-content;
+  font-size: 12px !important;
+}
+
+.slider-container .slider-header h5{
+  margin: 0;
+}
+
+.slider-container .slider-header .slider-amount{
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.rangeslider-horizontal{
+  height: 4px !important;
+}
+
+.rangeslider-horizontal .rangeslider__handle{
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.rangeslider-horizontal .rangeslider__handle:after{
+  width: 7px !important;
+  height: 7px !important;
+  top: 4px !important;
+  left: 4px !important;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+  line-height: 21px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: transparent;
+  border: 1px solid #27AE60;
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #27AE60;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper{
+  margin-top: 2.5rem;
+}
+
+.loading {
+  display          : inline-block;
+  width            : 20px;
+  height           : 20px;
+  border           : 3px solid #666666;
+  border-radius    : 50%;
+  border-top-color : #27AE60;
+  animation        : spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin-right: 15px;
+  z-index          : 1;
+}
+
+@keyframes spin {
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.float-r{
+  float: right;
+}
+
+.tab-header-active{
+  border-bottom: 2px solid #27AE60 !important;
+  color: #27AE60 !important;
+}
+
+.filter-item-active{
+  opacity: 1 !important;
+}
+
+.scale-wrapper{
+  transition: transform ease-in-out;
+}
+
+.zoom-in{
+  transform: scale(1);
+}
+
+.zoom-out{
+  transform: scale(1.3);
+}
